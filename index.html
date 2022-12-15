@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Můj Největ</title>
+
+    <style>
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: none;
+}
+
+        body{
+            
+            overflow: hidden;
+            background: radial-gradient(ellipse at bottom right, #7ab8b8 5%, #2d62d4 25%, #1d2a63 50%, #030243 100%);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  backdrop-filter: blur(10px);
+background-size: 110% 110%;
+animation: colorAnim 10s infinite ease-in-out;
+        }
+
+        @keyframes colorAnim {
+            0%{
+	            background-position: 100% 100%;
+            }
+
+            50%{
+                background-position: 50% 25%;
+            }
+
+            100%{
+                background-position: 100% 100%;
+            }
+        }
+
+        @keyframes circleAnim {
+            
+        }
+        
+
+        h1, p{
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+
+        /* p::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            border-radius: 1px;
+            background-color: white;
+        } */
+    </style>
+</head>
+<body onload="changeText()" style="margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; flex-flow: wrap column;">
+
+    <h1 id="errorCode" style="font-size: 2rem; margin: 0; padding: 0;">Nastala chyba u Windows aplikace <br> <span style="font-size: 1.75rem; margin: 0; padding: 0;">není to tvůj problém ale Microsoftu</span></h1>
+    <p style="font-size: 0.85rem;font-weight: normal;">Prosím nevypínejte počítač</p>
+</body>
+
+<script>
+    var getDocument = document.getElementById("errorCode");
+
+    const texts = ['Nastala chyba u Windows aplikace <br> <span style="font-size: 1.75rem; margin: 0; padding: 0;">není to tvůj problém ale Microsoftu</span>', 
+    'Systém Windows se aktualizuje <br> <span style="font-size: 1.75rem; margin: 0; padding: 0;">tato akce může trvat několik let</span>',
+    'Chtěli jste si uložit soubor? <br> <span style="font-size: 1.75rem; margin: 0; padding: 0;">windows aktualizace řekla ne</span>',
+    'V klidu si můžete udělat kafe <br> <span style="font-size: 1.75rem; margin: 0; padding: 0;">ve finále i zásobu na celý život</span>'
+                ];
+
+    function changeText(){
+        var rand = Math.floor(Math.random() * 4);;
+        getDocument.innerHTML = texts[rand];
+    }
+</script>
+</html>
