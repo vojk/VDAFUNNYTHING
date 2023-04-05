@@ -1,0 +1,67 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: none;
+}
+
+body {
+
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom right, #7ab8b8 5%, #2d62d4 25%, #1d2a63 50%, #030243 100%);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    backdrop-filter: blur(10px);
+    background-size: 110% 110%;
+    animation: colorAnim 10s infinite ease-in-out;
+}
+
+@keyframes colorAnim {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    50% {
+        background-position: 50% 25%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes circleAnim {
+
+}
+
+
+h1, p {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+
+/* p::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    border-radius: 1px;
+    background-color: white;
+} */
+
+
+.addtional_text_level_one {
+    font-size: 1.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+.addtional_text_level_two {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
